@@ -1,0 +1,65 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+
+        versionName "1.0"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            consumerProguardFiles 'proguard-base.txt'
+
+            buildConfigField "String", "API_BASE_URL", "\"https://s3-ap-northeast-1.amazonaws.com/m-et/Android/\""
+            buildConfigField "String", "PREFRENCES", "\"com.mercari.data\""
+            buildConfigField "int", "SERVICE_TIME_OUT_MILSEC", "25000"
+            buildConfigField "String" , "CACHE_DATABASE_NAME", "\"cache_db\""
+            buildConfigField "int" , "CACHE_DATABASE_VERSION", "1"
+            buildConfigField "int" , "PRODUCT_PAGE_SIZE", "20"
+        }
+
+        debug {
+            buildConfigField "String", "API_BASE_URL", "\"https://s3-ap-northeast-1.amazonaws.com/m-et/Android/\""
+            buildConfigField "String", "PREFRENCES", "\"com.mercari.data.debug\""
+            buildConfigField "int", "SERVICE_TIME_OUT_MILSEC", "3000"
+            buildConfigField "String" , "CACHE_DATABASE_NAME", "\"cache_db\""
+            buildConfigField "int" , "CACHE_DATABASE_VERSION", "1"
+            buildConfigField "int" , "PRODUCT_PAGE_SIZE", "20"
+        }
+    }
+
+}
+
+dependencies {
+    compile project(':domain')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //support
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    //RxJava
+    implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
+    //dagger
+    //dagger
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$converterGsonVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+//    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    //cache
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$roomVersion"
+}
