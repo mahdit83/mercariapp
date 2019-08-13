@@ -10,7 +10,7 @@ import javax.inject.Singleton
 
 @Singleton
 class AuthorizationManager @Inject
-constructor(private var context: Context) {
+constructor(context: Context) {
 
     private var accessToken = ""
     private var refreshToken = ""

@@ -20,13 +20,12 @@ import java.util.concurrent.TimeUnit
 
 abstract class AbstractService<S> {
     var authorizationManager: AuthorizationManager
-    private var service: S
+    internal var service: S
     private var serviceType: Class<S>? = null
     private val TIME_OUT_MIL_SECS = BuildConfig.SERVICE_TIME_OUT_MILSEC
     private var context: Context? = null
 
-    constructor(
-        context: Context, authorizationManager: AuthorizationManager,
+    constructor(authorizationManager: AuthorizationManager,
         serviceType: Class<S>
     ) {
         this.serviceType = serviceType

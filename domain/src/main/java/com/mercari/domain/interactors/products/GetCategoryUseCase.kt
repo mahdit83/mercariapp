@@ -4,8 +4,8 @@ import com.mercari.domain.executor.PostExecutionThread
 import com.mercari.domain.executor.ThreadExecutor
 import com.mercari.domain.interactors.base.UseCase
 import com.mercari.domain.model.Category
-import com.mercari.domain.repository.CacheStrategy
-import com.mercari.domain.repository.ProductRepository
+import com.mercari.domain.repository.base.CacheStrategy
+import com.mercari.domain.repository.products.ProductRepository
 import io.reactivex.Observable
 import javax.inject.Inject
 

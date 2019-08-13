@@ -12,5 +12,5 @@ interface ProductRetrofitService {
     fun getCategories(): Observable<List<CategoryEntity>>
 
     @GET
-    fun products(@Url url : String ,categoryName: String): Observable<List<ProductEntity>>
+    fun getProducts(@Url url : String ,categoryName: String): Observable<List<ProductEntity>>
 }
