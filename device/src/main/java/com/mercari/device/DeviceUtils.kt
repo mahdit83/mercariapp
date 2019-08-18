@@ -49,10 +49,10 @@ class DeviceUtils {
         }
 
     fun getDisplayDensity(context: Context): Float {
-        try {
-            return context.resources.displayMetrics.density
+        return try {
+            context.resources.displayMetrics.density
         } catch (ex: Throwable) {
-            return 0f
+            0f
         }
 
     }
