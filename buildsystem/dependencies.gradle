@@ -44,6 +44,7 @@ ext {
     crispVersion = '0.1.11'
     markdown_version = '3.0.1'
     pageIndicatorVersion ='1.0.1'
+    lifecycle_version='1.1.1'
 
     //for accub.in
     zxingVersion = '1.9.8'
