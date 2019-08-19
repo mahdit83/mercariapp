@@ -29,9 +29,7 @@ class BaseMVVMFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         baseViewModel = ViewModelProviders.of(this).get(BaseViewModel::class.java)
-
         baseViewModel.start()
-
         subscribe()
     }
 
