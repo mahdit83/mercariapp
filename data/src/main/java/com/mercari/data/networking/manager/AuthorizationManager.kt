@@ -29,9 +29,9 @@ constructor(context: Context) {
         sharedPreferences.edit().putString(KEY_AUTH_TOKEN, accessToken).apply()
     }
 
-    fun getAccessToken(): String {
+    fun getAccessToken(): String? {
         if (TextUtils.isEmpty(accessToken)) {
-            accessToken = sharedPreferences.getString(KEY_AUTH_TOKEN, null)
+            accessToken = sharedPreferences.getString(KEY_AUTH_TOKEN, "")
         }
         return accessToken
 

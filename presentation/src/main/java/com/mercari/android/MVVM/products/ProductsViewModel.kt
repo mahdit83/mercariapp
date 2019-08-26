@@ -18,7 +18,8 @@ class ProductsViewModel @Inject constructor(private val getProductUseCase: GetPr
 
 
     fun start() {
-        getProductUseCase.execute(observer, "test")
+        //All , Men , Women
+        getProductUseCase.execute(observer, "All")
 
     }
 

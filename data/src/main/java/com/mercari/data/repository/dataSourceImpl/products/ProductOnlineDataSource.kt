@@ -18,19 +18,14 @@ class ProductOnlineDataSource(
 
     override fun getProduct(categoryName: String): Observable<List<ProductEntity>> {
         return service.getCategories().flatMapIterable { category: List<CategoryEntity> -> category }
-            .flatMap { t: CategoryEntity -> getProductFormServer(t, categoryName) }
+            .flatMap { t: CategoryEntity -> getProductFormServer(t) }
 
 
     }
 
-    private fun getProductFormServer(t: CategoryEntity, categoryName: String): Observable<List<ProductEntity>>? {
+    private fun getProductFormServer(t: CategoryEntity): Observable<List<ProductEntity>>? {
 
-        return if (t.name == categoryName) {
-            service.getProducts(t.data, t.name)
-
-        } else {
-            null
-        }
+        return service.getProducts(t.data)
 
     }
 }
