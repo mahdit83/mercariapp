@@ -21,9 +21,10 @@ android {
         }
     }
 
-//    kapt {
-//        generateStubs = true
-//    }
+    kapt {
+        generateStubs = true
+        correctErrorTypes true
+    }
 }
 
 dependencies {

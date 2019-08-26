@@ -1,24 +1,26 @@
-package com.mercari.android.MVVM.base
+package com.mercari.android.MVVM.products
 
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import com.mercari.domain.interactors.base.BaseObserver
 import com.mercari.domain.interactors.products.GetProductUseCase
 import com.mercari.domain.model.Product
+import java.util.logging.Logger
+import javax.inject.Inject
 
-class BaseViewModel : ViewModel() {
+class ProductsViewModel @Inject constructor(private val getProductUseCase: GetProductUseCase) : ViewModel() {
 
 
-    private lateinit var getProductUseCase: GetProductUseCase
+    private val logger = Logger.getLogger("Mahdi")
+
     private val observer: ProductObserver = ProductObserver()
     var allProducts: MutableLiveData<List<Product>> = MutableLiveData()
 
 
     fun start() {
-//        getProductUseCase.execute(observer, 0)
+        getProductUseCase.execute(observer, "test")
 
     }
-
 
 
     override fun onCleared() {
@@ -34,10 +36,14 @@ class BaseViewModel : ViewModel() {
 
         override fun onComplete() {
             // no-op by default.
+            logger.warning("onComplete")
+
         }
 
         override fun onError(exception: Throwable) {
             // no-op by default.
+            logger.warning("onError")
+
         }
     }
 

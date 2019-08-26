@@ -1,41 +1,47 @@
-package com.mercari.android.MVVM.base
+package com.mercari.android.MVVM.products
 
 import android.arch.lifecycle.MutableLiveData
+import android.arch.lifecycle.ViewModelProvider
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Context
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.mercari.android.R
 import com.mercari.domain.model.Product
+import dagger.android.support.AndroidSupportInjection
+import dagger.android.support.DaggerFragment
 import java.util.logging.Logger
+import javax.inject.Inject
 
 // TODO: Rename parameter arguments, choose names that match
 
 
-class BaseMVVMFragment : Fragment() {
+class ProductsMVVMFragment : Fragment() {
 
 
-    lateinit var baseViewModel: BaseViewModel
+    lateinit var productsViewModel: ProductsViewModel
 
     var rootView: View? = null
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     lateinit var products: MutableLiveData<List<Product>>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        baseViewModel = ViewModelProviders.of(this).get(BaseViewModel::class.java)
-        baseViewModel.start()
+        AndroidSupportInjection.inject(this)
+        productsViewModel = ViewModelProviders.of(this,viewModelFactory).get(ProductsViewModel::class.java)
+        productsViewModel.start()
         subscribe()
     }
 
     private fun subscribe() {
 
-        baseViewModel.allProducts.observe(this, android.arch.lifecycle.Observer { t -> renderData(t) })
+        productsViewModel.allProducts.observe(this, android.arch.lifecycle.Observer { t -> renderData(t) })
 
     }
 

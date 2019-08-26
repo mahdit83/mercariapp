@@ -12,15 +12,14 @@ import javax.inject.Inject
 
 class GetProductUseCase
 @Inject constructor(
-    private val productCategory: Category,
     private val productRepository: ProductRepository,
     private val threadExecutor: ThreadExecutor,
     private val postExecutionThread: PostExecutionThread
-) : UseCase<List<Product>, Int>(threadExecutor, postExecutionThread) {
+) : UseCase<List<Product>, String>(threadExecutor, postExecutionThread) {
 
 
-    override fun buildUseCaseObservable(params: Int): Observable<List<Product>> {
-        return productRepository.getProduct(CacheStrategy.ONLINE_FIRST ,productCategory.name)
+    override fun buildUseCaseObservable(categoryName : String): Observable<List<Product>> {
+        return productRepository.getProduct(CacheStrategy.ONLINE_FIRST ,categoryName)
 
     }
 
