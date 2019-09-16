@@ -1,7 +1,7 @@
 package com.mercari.android.MVVM.products
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModel
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.mercari.domain.interactors.base.BaseObserver
 import com.mercari.domain.interactors.products.GetProductUseCase
 import com.mercari.domain.model.Product

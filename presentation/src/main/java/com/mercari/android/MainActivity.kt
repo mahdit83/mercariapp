@@ -1,8 +1,8 @@
 package com.mercari.android
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import com.mercari.android.MVVM.products.ProductsMVVMFragment
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
@@ -14,9 +14,9 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() ,HasSupportFragmentInjector {
 
     @Inject
-    lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
+    lateinit var fragmentDispatchingAndroidInjector: DispatchingAndroidInjector<androidx.fragment.app.Fragment>
 
-    override fun supportFragmentInjector(): AndroidInjector<Fragment> {
+    override fun supportFragmentInjector(): AndroidInjector<androidx.fragment.app.Fragment> {
         return fragmentDispatchingAndroidInjector
     }
 
@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() ,HasSupportFragmentInjector {
         startFragment(ProductsMVVMFragment())
     }
 
-    private fun startFragment(fragment: Fragment) {
+    private fun startFragment(fragment: androidx.fragment.app.Fragment) {
 
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()

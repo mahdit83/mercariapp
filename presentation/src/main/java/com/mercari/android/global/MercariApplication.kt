@@ -2,7 +2,7 @@ package com.mercari.android.global
 
 import android.app.Activity
 import android.app.Application
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import com.mercari.android.di.DaggerApplicationComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class MercariApplication : Application(), HasActivityInjector, HasSupportFragmentInjector {
 
-    override fun supportFragmentInjector(): AndroidInjector<Fragment> {
+    override fun supportFragmentInjector(): AndroidInjector<androidx.fragment.app.Fragment> {
         return fragmentInjector
     }
 
@@ -26,7 +26,7 @@ class MercariApplication : Application(), HasActivityInjector, HasSupportFragmen
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Activity>
 
     @Inject
-    lateinit var fragmentInjector: DispatchingAndroidInjector<Fragment>
+    lateinit var fragmentInjector: DispatchingAndroidInjector<androidx.fragment.app.Fragment>
 
 
     override fun onCreate() {

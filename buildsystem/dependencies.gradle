@@ -46,6 +46,8 @@ ext {
     pageIndicatorVersion ='1.0.1'
     lifecycle_version='1.1.1'
 
+    nav_version = '2.1.0'
+
     //for accub.in
     zxingVersion = '1.9.8'
     zbarVersion = '1.9.8'

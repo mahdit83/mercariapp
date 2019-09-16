@@ -1,7 +1,7 @@
 package com.mercari.android.di
 
-import android.arch.lifecycle.ViewModel
-import android.arch.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
 import com.mercari.android.MVVM.base.ViewModelFactory
 import com.mercari.android.MVVM.products.ProductsViewModel
 import dagger.Binds

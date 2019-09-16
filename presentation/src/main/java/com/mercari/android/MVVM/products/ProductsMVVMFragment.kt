@@ -1,18 +1,16 @@
 package com.mercari.android.MVVM.products
 
-import android.arch.lifecycle.MutableLiveData
-import android.arch.lifecycle.ViewModelProvider
-import android.arch.lifecycle.ViewModelProviders
-import android.content.Context
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.mercari.android.R
 import com.mercari.domain.model.Product
 import dagger.android.support.AndroidSupportInjection
-import dagger.android.support.DaggerFragment
 import java.util.logging.Logger
 import javax.inject.Inject
 
@@ -34,19 +32,20 @@ class ProductsMVVMFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         AndroidSupportInjection.inject(this)
-        productsViewModel = ViewModelProviders.of(this,viewModelFactory).get(ProductsViewModel::class.java)
+        productsViewModel =
+            ViewModelProviders.of(this, viewModelFactory).get(ProductsViewModel::class.java)
         productsViewModel.start()
         subscribe()
     }
 
     private fun subscribe() {
 
-        productsViewModel.allProducts.observe(this, android.arch.lifecycle.Observer { t -> renderData(t) })
+//        productsViewModel.allProducts.observe(this, androidx.lifecycle.Observer { t -> renderData(t) })
 
     }
 
     private fun renderData(t: List<Product>?) {
-        t?.forEach { product-> Logger.getLogger("salam").warning(product.name) }
+        t?.forEach { product -> Logger.getLogger("salam").warning(product.name) }
     }
 
 
