@@ -3,6 +3,7 @@ package com.mercari.android
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.NavHostFragment
 import com.mercari.android.MVVM.products.ProductsMVVMFragment
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
@@ -25,7 +26,8 @@ class MainActivity : AppCompatActivity() ,HasSupportFragmentInjector {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        startFragment(ProductsMVVMFragment())
+//        startFragment(ProductsMVVMFragment())
+        startNavigationStuff()
     }
 
     private fun startFragment(fragment: androidx.fragment.app.Fragment) {
@@ -35,4 +37,11 @@ class MainActivity : AppCompatActivity() ,HasSupportFragmentInjector {
         transaction.add(R.id.container, fragment)
         transaction.commit()
     }
+
+    private fun startNavigationStuff(){
+
+        val host = NavHostFragment.create(R.navigation.app_navigation)
+        supportFragmentManager.beginTransaction().replace(R.id.container, host).setPrimaryNavigationFragment(host).commit()
+    }
+
 }

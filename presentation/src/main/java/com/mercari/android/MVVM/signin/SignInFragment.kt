@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.mercari.android.R
+import kotlinx.android.synthetic.main.sign_in_fragment.*
 
 class SignInFragment : Fragment() {
 
@@ -27,7 +28,16 @@ class SignInFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(SignInViewModel::class.java)
-        // TODO: Use the ViewModel
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+
+        val name = SignInFragmentArgs.fromBundle(arguments).nameToShow
+        lable.text = name
+
     }
 
 }
