@@ -1,9 +1,9 @@
 package com.mercari.data.repository.datasource.products
 
 import com.mercari.data.mapper.ProductsEntityMapper
-import com.mercari.domain.model.Category
+import com.mercari.domain.model.products.Category
 import com.mercari.domain.model.CategoryEntity
-import com.mercari.domain.model.Product
+import com.mercari.domain.model.products.Product
 import com.mercari.domain.model.ProductEntity
 import com.mercari.domain.repository.base.CacheStrategy
 import com.mercari.domain.repository.products.ProductRepository

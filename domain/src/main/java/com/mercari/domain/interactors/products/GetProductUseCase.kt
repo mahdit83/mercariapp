@@ -3,8 +3,7 @@ package com.mercari.domain.interactors.products
 import com.mercari.domain.executor.PostExecutionThread
 import com.mercari.domain.executor.ThreadExecutor
 import com.mercari.domain.interactors.base.UseCase
-import com.mercari.domain.model.Category
-import com.mercari.domain.model.Product
+import com.mercari.domain.model.products.Product
 import com.mercari.domain.repository.base.CacheStrategy
 import com.mercari.domain.repository.products.ProductRepository
 import io.reactivex.Observable

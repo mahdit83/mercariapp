@@ -1,13 +1,12 @@
 package com.mercari.android.MVVM.signup
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
-
 import com.mercari.android.R
 import kotlinx.android.synthetic.main.sign_up_fragment.*
 

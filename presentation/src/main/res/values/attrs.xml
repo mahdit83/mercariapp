@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <declare-styleable name="Persian">
+    <attr name="customTypeface" format="string" />
+    <attr name="withSeparator" format="boolean" />
+  </declare-styleable>
+
+  <declare-styleable name="CurrencyInput">
+    <attr name="edittable" format="boolean" />
+  </declare-styleable>
+
+  <declare-styleable name="PersianEditText">
+    <attr name="numberMode" format="boolean"/>
+  </declare-styleable>
+</resources>

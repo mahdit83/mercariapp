@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mercari.domain.interactors.base.BaseObserver
 import com.mercari.domain.interactors.products.GetProductUseCase
-import com.mercari.domain.model.Product
+import com.mercari.domain.model.products.Product
 import java.util.logging.Logger
 import javax.inject.Inject
 

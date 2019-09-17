@@ -1,9 +1,9 @@
 package com.mercari.data.mapper
 
 import com.mercari.data.mapper.base.DataMapper
-import com.mercari.domain.model.Category
+import com.mercari.domain.model.products.Category
 import com.mercari.domain.model.CategoryEntity
-import com.mercari.domain.model.Product
+import com.mercari.domain.model.products.Product
 import com.mercari.domain.model.ProductEntity
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -40,7 +40,8 @@ class ProductsEntityMapper @Inject constructor() : DataMapper<List<ProductEntity
 
         categoryEntities?.forEach { categoryEntity: CategoryEntity ->
 
-            val category = Category(categoryEntity.name, categoryEntity.data)
+            val category =
+                Category(categoryEntity.name, categoryEntity.data)
 
             categories.add(category)
         }

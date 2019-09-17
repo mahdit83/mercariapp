@@ -3,4 +3,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Relative Time -->
+    <string name="relativetime_momentsago">همین الان</string>
+    <string name="relativetime_secondsago">لحظاتی پیش</string>
+    <string name="relativetime_minutesago">%d دقیقه پیش</string>
+    <string name="relativetime_hoursago">%d ساعت پیش</string>
+    <string name="relativetime_yesterday">دیروز</string>
+    <string name="relativetime_daysago">%d روز پیش</string>
+    <string name="relativetime_weeksago">%d هفته پیش</string>
+
+
+    <string name="retry_title">تلاش مجدد</string>
 </resources>

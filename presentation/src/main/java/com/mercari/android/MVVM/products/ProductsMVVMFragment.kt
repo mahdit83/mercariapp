@@ -9,7 +9,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.mercari.android.R
-import com.mercari.domain.model.Product
+import com.mercari.domain.model.products.Product
 import dagger.android.support.AndroidSupportInjection
 import java.util.logging.Logger
 import javax.inject.Inject

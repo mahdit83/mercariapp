@@ -19,7 +19,17 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "FONT", "\"fonts/IRANSansMobile.ttf\""
+
         }
+        debug {
+            buildConfigField "String", "FONT", "\"fonts/IRANSansMobile.ttf\""
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
 
     kapt {
