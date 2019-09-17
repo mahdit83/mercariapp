@@ -23,7 +23,7 @@ ext {
     butterKnifeVersion = '8.8.1'
     rxJavaVersion = '2.1.9'
     retrofitVersion = '2.3.0'
-    daggerVersion = '2.11'
+    daggerVersion = '2.16'
     playServicesVersion = '11.6.2'
     rxBindingVersion = '2.1.1'
     rxAndroidVersion = '2.0.2'
