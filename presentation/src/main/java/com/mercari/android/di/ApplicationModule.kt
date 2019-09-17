@@ -41,7 +41,7 @@ class ApplicationModule {
     //repository
     @Provides
     @Singleton
-    internal fun providesHomeRepository(productsDataRepository: ProductsDataRepository): ProductRepository {
+    internal fun providesProductRepository(productsDataRepository: ProductsDataRepository): ProductRepository {
         return productsDataRepository
     }
 
@@ -55,7 +55,7 @@ class ApplicationModule {
     //Device
     @Provides
     @Singleton
-    fun providesConnectionDetector(context: Context): ConnectionDetector{
+    fun providesConnectionDetector(context: Context): ConnectionDetector {
         return ConnectionDetector(context)
     }
 

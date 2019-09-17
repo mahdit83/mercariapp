@@ -8,7 +8,7 @@ import com.mercari.domain.model.home.HomeItem
 import java.util.logging.Logger
 import javax.inject.Inject
 
-class HomeViewModel @Inject constructor(private val getHomeItemsUseCase: GetHomeItemsUseCase) :
+class HomeViewModel @Inject constructor() :
     ViewModel() {
 
     private val logger = Logger.getLogger("Mahdi")
@@ -18,7 +18,6 @@ class HomeViewModel @Inject constructor(private val getHomeItemsUseCase: GetHome
 
     fun start(){
 
-        getHomeItemsUseCase.execute(observer,0)
     }
 
     inner class HomeItemObserver : BaseSingleObserver<List<HomeItem>>(){

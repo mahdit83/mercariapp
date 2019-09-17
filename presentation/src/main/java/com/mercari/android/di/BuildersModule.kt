@@ -1,5 +1,6 @@
 package com.mercari.android.di
 
+import com.mercari.android.MVVM.home.HomeFragment
 import com.mercari.android.MVVM.products.ProductsMVVMFragment
 import com.mercari.android.MainActivity
 import dagger.Module
@@ -19,6 +20,10 @@ abstract class BuildersModule {
     @ActivityScope
     @ContributesAndroidInjector(modules = [ActivityModule::class])
     internal abstract fun bindProductsMVVMFragment(): ProductsMVVMFragment
+
+    @ActivityScope
+    @ContributesAndroidInjector(modules = [ActivityModule::class])
+    internal abstract fun bindHomeFragment(): HomeFragment
 
 
 }

@@ -5,16 +5,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mercari.android.MVVM.products.ProductsViewModel
 import com.mercari.android.MVVM.ui.adapters.GridAdapter
 import com.mercari.android.MVVM.ui.listeners.OnAdapterItemClickListener
 import com.mercari.android.R
 import com.mercari.android.model.HomeItemModel
 import kotlinx.android.synthetic.main.home_fragment.*
+import javax.inject.Inject
 
 class HomeFragment : Fragment() {
+
+    lateinit var homeViewModel: HomeViewModel
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     companion object {
         fun newInstance() = HomeFragment()
@@ -31,7 +39,7 @@ class HomeFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
+        viewModel = ViewModelProviders.of(this,viewModelFactory).get(HomeViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
