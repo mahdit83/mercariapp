@@ -17,4 +17,11 @@
     <dimen name="text_size_huge">24sp</dimen>
     <dimen name="text_size_very_huge">48sp</dimen>
 
+    <!-- radius -->
+    <dimen name="default_button_radius">8dp</dimen>
+
+    <!-- Default button -->
+    <dimen name="defaultButtonMinHeight">51dp</dimen>
+
+
 </resources>

@@ -1,7 +1,6 @@
 package com.mercari.android.MVVM.ui.components;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
@@ -9,7 +8,6 @@ import android.util.AttributeSet;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.core.content.res.ResourcesCompat;
 
-import com.mercari.android.BuildConfig;
 import com.mercari.android.R;
 
 

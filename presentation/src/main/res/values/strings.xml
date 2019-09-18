@@ -16,4 +16,6 @@
 
     <string name="retry_title">تلاش مجدد</string>
     <string name="title_enter_terminal_number">شماره ترمینال را وارد کنید</string>
+    <string name="title_continue">ادامه</string>
+    <string name="title_terminal_number">شماره ترمینال</string>
 </resources>

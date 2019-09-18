@@ -14,5 +14,16 @@
         <item name="android:fontFamily">@font/iransansmobile</item>
     </style>
 
+    //Buttons
+
+    <style name="DefaultButton" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/defaultbutton_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:fontFamily">@font/iransansmobile</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:minHeight">@dimen/defaultButtonMinHeight</item>
+    </style>
+
 
 </resources>

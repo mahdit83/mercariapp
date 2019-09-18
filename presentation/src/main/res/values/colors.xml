@@ -14,4 +14,6 @@
 
     //PersianTextInput
     <color name="persianTextInputBackgroundColorBlack">@color/primaryTextColor</color>
+
+    <color name="white">#ffffff</color>
 </resources>
