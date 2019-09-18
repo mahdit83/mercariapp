@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_margin="@dimen/default_margin_quarter"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:background="@drawable/persian_input_back_ground_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.mercari.android.MVVM.ui.components.PersianTextView
+                android:id="@+id/hintText"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@id/icon"
+                android:layout_width="wrap_content"
+                tools:text="hint......"
+                android:layout_height="wrap_content"/>
+
+
+        <ImageView
+                android:layout_marginStart="@dimen/default_margin_half"
+                android:src="@mipmap/ic_launcher"
+                app:layout_constraintTop_toTopOf="@id/editText"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="@dimen/default_margin_double"
+                android:layout_height="@dimen/default_margin_double"
+            android:adjustViewBounds="true"
+                android:id="@+id/icon"
+            android:scaleType="fitXY"/>
+
+        <com.mercari.android.MVVM.ui.components.PersianEditText
+                android:background="@null"
+                android:layout_marginStart="@dimen/default_margin_half"
+                android:layout_marginEnd="@dimen/default_margin_half"
+                android:id="@+id/editText"
+                app:layout_constraintTop_toBottomOf="@id/hintText"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/icon"
+                app:layout_constraintBottom_toTopOf="@id/errorMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        <com.mercari.android.MVVM.ui.components.PersianTextView
+            android:id="@+id/errorMessage"
+                app:layout_constraintTop_toBottomOf="@id/editText"
+                app:layout_constraintStart_toStartOf="@id/icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/default_margin_half"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>

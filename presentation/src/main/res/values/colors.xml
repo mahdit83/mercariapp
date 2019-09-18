@@ -11,4 +11,7 @@
     <color name="divider">#b7b7b7</color>
 
     <color name="homeItemColor">#bf944f</color>
+
+    //PersianTextInput
+    <color name="persianTextInputBackgroundColorBlack">@color/primaryTextColor</color>
 </resources>

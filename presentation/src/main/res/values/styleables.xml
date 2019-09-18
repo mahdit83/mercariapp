@@ -9,6 +9,8 @@
 
     <declare-styleable name="PersianTextInput">
         <attr name="android:text" />
+        <attr name="android:hint" />
+        <attr name="errorMessage"/>
         <attr name="android:inputType" />
         <attr name="android:imeOptions" />
         <attr name="android:maxLength" />
