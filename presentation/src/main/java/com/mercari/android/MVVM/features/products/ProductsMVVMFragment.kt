@@ -1,4 +1,4 @@
-package com.mercari.android.MVVM.products
+package com.mercari.android.MVVM.features.products
 
 import android.os.Bundle
 import android.view.LayoutInflater

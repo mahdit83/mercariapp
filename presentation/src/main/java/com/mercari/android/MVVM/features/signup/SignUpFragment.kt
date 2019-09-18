@@ -1,4 +1,4 @@
-package com.mercari.android.MVVM.signup
+package com.mercari.android.MVVM.features.signup
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -35,12 +35,12 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        gotoNextButton.setOnClickListener {
-            val name = userNameEdit.text.toString()
-            val action = SignUpFragmentDirections.actionSignUpFragmentToSignInFragment()
-            action.setNameToShow(name)
-            findNavController().navigate(action)
-        }
+//        gotoNextButton.setOnClickListener {
+//            val name = userNameEdit.text.toString()
+//            val action = SignUpFragmentDirections.actionSignUpFragmentToSignInFragment()
+//            action.setNameToShow(name)
+//            findNavController().navigate(action)
+//        }
     }
 
 }

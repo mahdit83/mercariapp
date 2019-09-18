@@ -7,17 +7,20 @@
 
     <fragment
             android:id="@+id/homeFragment"
-            android:name="com.mercari.android.MVVM.home.HomeFragment"
+            android:name="com.mercari.android.MVVM.features.home.HomeFragment"
             android:label="home_fragment"
             tools:layout="@layout/home_fragment" >
         <action
                 android:id="@+id/action_homeFragment_to_signUpFragment"
                 app:destination="@id/signUpFragment" />
+        <action
+                android:id="@+id/action_homeFragment_to_terminalNumberFragment"
+                app:destination="@id/terminalNumberFragment" />
     </fragment>
 
     <fragment
             android:id="@+id/signUpFragment"
-            android:name="com.mercari.android.MVVM.signup.SignUpFragment"
+            android:name="com.mercari.android.MVVM.features.signup.SignUpFragment"
             android:label="sign_up_fragment"
             tools:layout="@layout/sign_up_fragment" >
         <action
@@ -26,7 +29,7 @@
     </fragment>
     <fragment
             android:id="@+id/signInFragment"
-            android:name="com.mercari.android.MVVM.signin.SignInFragment"
+            android:name="com.mercari.android.MVVM.features.signin.SignInFragment"
             android:label="sign_in_fragment"
             tools:layout="@layout/sign_in_fragment" >
         <argument
@@ -34,5 +37,10 @@
                 android:defaultValue="SignInFragmentArgument"
                 app:argType="string" />
     </fragment>
+    <fragment
+            android:id="@+id/terminalNumberFragment"
+            android:name="com.mercari.android.MVVM.features.terminalnumber.TerminalNumberFragment"
+            android:label="terminal_number_fragment"
+            tools:layout="@layout/terminal_number_fragment" />
 
 </navigation>

@@ -1,7 +1,7 @@
 package com.mercari.android.di
 
-import com.mercari.android.MVVM.home.HomeFragment
-import com.mercari.android.MVVM.products.ProductsMVVMFragment
+import com.mercari.android.MVVM.features.home.HomeFragment
+import com.mercari.android.MVVM.features.products.ProductsMVVMFragment
 import com.mercari.android.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector

@@ -5,6 +5,7 @@
         android:layout_height="wrap_content"
         xmlns:tools="http://schemas.android.com/tools">
     <androidx.cardview.widget.CardView
+            android:id="@+id/homeItemContainer"
             android:layout_margin="@dimen/default_margin"
             tool:cardElevation="@dimen/default_margin_half"
             tool:cardCornerRadius="@dimen/default_margin"

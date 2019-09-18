@@ -1,9 +1,8 @@
-package com.mercari.android.MVVM.home
+package com.mercari.android.MVVM.features.home
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.mercari.domain.interactors.base.BaseSingleObserver
-import com.mercari.domain.interactors.home.GetHomeItemsUseCase
 import com.mercari.domain.model.home.HomeItem
 import java.util.logging.Logger
 import javax.inject.Inject

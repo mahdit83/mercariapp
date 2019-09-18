@@ -1,4 +1,4 @@
-package com.mercari.android.MVVM.signup
+package com.mercari.android.MVVM.features.signup
 
 import androidx.lifecycle.ViewModel
 

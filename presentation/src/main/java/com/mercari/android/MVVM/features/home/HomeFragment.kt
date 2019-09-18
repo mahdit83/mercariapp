@@ -1,4 +1,4 @@
-package com.mercari.android.MVVM.home
+package com.mercari.android.MVVM.features.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,18 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mercari.android.MVVM.base.ViewModelFactory
-import com.mercari.android.MVVM.home.adapter.HomeAdapter
-import com.mercari.android.MVVM.products.ProductsViewModel
-import com.mercari.android.MVVM.ui.adapters.GridAdapter
+import com.mercari.android.MVVM.features.home.adapter.HomeAdapter
 import com.mercari.android.MVVM.ui.dividers.NullDividerItemDecoration
 import com.mercari.android.MVVM.ui.listeners.OnAdapterItemClickListener
 import com.mercari.android.R
 import com.mercari.android.model.HomeItemModel
 import dagger.android.support.AndroidSupportInjection
 import kotlinx.android.synthetic.main.home_fragment.*
+import kotlinx.android.synthetic.main.sign_up_fragment.*
 import javax.inject.Inject
 
 class HomeFragment : Fragment() {
@@ -70,6 +68,8 @@ class HomeFragment : Fragment() {
             OnAdapterItemClickListener<HomeItemModel> {
             override fun onAdapterItemClick(t: HomeItemModel) {
 
+                handleMenuClick(t)
+
             }
 
             override fun onAdapterItemLongClick(t: HomeItemModel) {
@@ -83,6 +83,12 @@ class HomeFragment : Fragment() {
         recyclerView.adapter = adapter
 
 
+    }
+
+    private fun handleMenuClick(t: HomeItemModel) {
+
+        val action = HomeFragmentDirections.actionHomeFragmentToTerminalNumberFragment()
+        findNavController().navigate(action)
     }
 
 

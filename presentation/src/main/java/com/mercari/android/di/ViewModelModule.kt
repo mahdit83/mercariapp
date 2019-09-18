@@ -3,8 +3,8 @@ package com.mercari.android.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.mercari.android.MVVM.base.ViewModelFactory
-import com.mercari.android.MVVM.home.HomeViewModel
-import com.mercari.android.MVVM.products.ProductsViewModel
+import com.mercari.android.MVVM.features.home.HomeViewModel
+import com.mercari.android.MVVM.features.products.ProductsViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap

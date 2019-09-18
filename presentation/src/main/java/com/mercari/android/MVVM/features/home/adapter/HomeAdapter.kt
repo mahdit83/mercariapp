@@ -1,8 +1,8 @@
-package com.mercari.android.MVVM.home.adapter
+package com.mercari.android.MVVM.features.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.mercari.android.MVVM.home.viewHolder.HomeItemViewHolder
+import com.mercari.android.MVVM.features.home.viewHolder.HomeItemViewHolder
 import com.mercari.android.MVVM.ui.adapters.GridAdapter
 import com.mercari.android.MVVM.ui.listeners.OnAdapterItemClickListener
 import com.mercari.android.MVVM.ui.viewHolders.BaseViewHolder
@@ -23,7 +23,7 @@ class HomeAdapter(
                     HomeItemModel.VIEW_TYPE,
                     parent,
                     false
-                )
+                ), onAdapterItemClickListener
             )
         }
 
