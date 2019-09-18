@@ -21,6 +21,7 @@
 
 
         <ImageView
+                android:visibility="gone"
                 android:layout_marginStart="@dimen/default_margin_half"
                 android:src="@mipmap/ic_launcher"
                 app:layout_constraintTop_toTopOf="@id/editText"

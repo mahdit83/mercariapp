@@ -64,13 +64,12 @@ class PersianTextInput : LinearLayout {
 
         var hint = a.getString(R.styleable.PersianTextInput_android_hint)
 
-        if(!TextUtils.isEmpty(hint)){
+        if (!TextUtils.isEmpty(hint)) {
             hintTextView.visibility = View.VISIBLE
             hintTextView.text = hint
-        }else{
+        } else {
             hintTextView.visibility = View.GONE
         }
-
 
     }
 
