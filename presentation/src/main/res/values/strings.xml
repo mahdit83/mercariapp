@@ -18,4 +18,11 @@
     <string name="title_enter_terminal_number">شماره ترمینال را وارد کنید</string>
     <string name="title_continue">ادامه</string>
     <string name="title_terminal_number">شماره ترمینال</string>
+    <string name="title_terminal_name">شماره ترمینال:</string>
+    <string name="title_store_name">نام فروشگاه:</string>
+    <string name="title_phone_number">تلفن:</string>
+    <string name="title_mobile_number">موبایل:</string>
+    <string name="title_address">آدرس:</string>
+    <string name="title_cancel">لغو</string>
+    <string name="title_confirm">تایید</string>
 </resources>

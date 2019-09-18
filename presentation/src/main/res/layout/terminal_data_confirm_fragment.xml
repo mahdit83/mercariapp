@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_marginTop="@dimen/default_margin_triple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MVVM.features.terminalconfirm.TerminalDataConfirmFragment">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_button_radius"
+                android:orientation="horizontal">
+
+            <com.mercari.android.MVVM.ui.components.PersianTextView
+                    style="@style/PrimaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_terminal_name" />
+
+            <com.mercari.android.MVVM.ui.components.PersianTextView
+                    android:id="@+id/textViewTerminalNumber"
+                    style="@style/PrimaryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    tools:text="شماره ترمینال" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_button_radius"
+                android:orientation="horizontal">
+
+            <com.mercari.android.MVVM.ui.components.PersianTextView
+                    style="@style/PrimaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_store_name" />
+
+            <com.mercari.android.MVVM.ui.components.PersianTextView
+                    android:id="@+id/textViewStoreName"
+                    style="@style/PrimaryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    tools:text="صثشماره صثصث" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_button_radius"
+                android:orientation="horizontal">
+
+            <com.mercari.android.MVVM.ui.components.PersianTextView
+                    style="@style/PrimaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_phone_number" />
+
+            <com.mercari.android.MVVM.ui.components.PersianTextView
+                    android:id="@+id/textViewPhone"
+                    style="@style/PrimaryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    tools:text="شماره ترمینال" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_button_radius"
+                android:orientation="horizontal">
+
+            <com.mercari.android.MVVM.ui.components.PersianTextView
+                    style="@style/PrimaryText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_mobile_number" />
+
+            <com.mercari.android.MVVM.ui.components.PersianTextView
+                    android:id="@+id/textViewMobileNumber"
+                    style="@style/PrimaryText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    tools:text="شماره ترمینال" />
+
+        </LinearLayout>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/default_margin_half"
+                android:layout_marginBottom="@dimen/default_margin_half"
+                android:background="@color/divider" />
+
+        <com.mercari.android.MVVM.ui.components.PersianTextView
+                style="@style/PrimaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_address" />
+
+        <com.mercari.android.MVVM.ui.components.PersianTextView
+                android:id="@+id/textViewAddress"
+                style="@style/PrimaryText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                tools:text="آدرس تهران یبنینبن تین" />
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/default_margin_half"
+                android:layout_marginBottom="@dimen/default_margin_half"
+                android:background="@color/divider" />
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+            android:layout_marginBottom="@dimen/default_margin"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+                style="@style/DefaultButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_half"
+                android:layout_weight="0.5"
+                android:text="@string/title_cancel" />
+
+        <Button
+                style="@style/DefaultButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/default_margin_half"
+                android:layout_weight="0.5"
+                android:text="@string/title_confirm" />
+
+
+    </LinearLayout>
+
+</FrameLayout>

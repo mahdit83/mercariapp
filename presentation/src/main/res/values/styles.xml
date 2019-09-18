@@ -25,5 +25,18 @@
         <item name="android:minHeight">@dimen/defaultButtonMinHeight</item>
     </style>
 
+    //Texts
+
+    <style name="PrimaryText">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:fontFamily">@font/iransansmobile</item>
+    </style>
+
+    <style name="TitleText" parent="PrimaryText">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+    </style>
+
 
 </resources>
