@@ -6,8 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.mercari.android.MVVM.features.home.HomeFragmentDirections
 
 import com.mercari.android.R
+import kotlinx.android.synthetic.main.terminal_number_fragment.*
 
 class TerminalNumberFragment : Fragment() {
 
@@ -27,7 +31,18 @@ class TerminalNumberFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(TerminalNumberViewModel::class.java)
-        // TODO: Use the ViewModel
+        initializeUi()
+    }
+
+    private fun initializeUi() {
+
+        val action = TerminalNumberFragmentDirections.actionTerminalNumberFragmentToTerminalDataConfirmFragment()
+
+        button.setOnClickListener {
+            findNavController().navigate(action)
+        }
+
+
     }
 
 }

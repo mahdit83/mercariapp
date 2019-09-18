@@ -16,10 +16,10 @@
         <action
                 android:id="@+id/action_homeFragment_to_terminalNumberFragment"
                 app:destination="@id/terminalNumberFragment"
-                app:enterAnim="@anim/fade_in"
-                app:exitAnim="@anim/fade_out"
-                app:popEnterAnim="@anim/fade_in"
-                app:popExitAnim="@anim/fade_out"
+                app:enterAnim="@anim/slide_in"
+                app:exitAnim="@anim/slide_out"
+                app:popEnterAnim="@anim/slide_in"
+                app:popExitAnim="@anim/slide_out"
                 />
     </fragment>
 
@@ -46,6 +46,18 @@
             android:id="@+id/terminalNumberFragment"
             android:name="com.mercari.android.MVVM.features.terminalnumber.TerminalNumberFragment"
             android:label="terminal_number_fragment"
-            tools:layout="@layout/terminal_number_fragment" />
+            tools:layout="@layout/terminal_number_fragment" >
+        <action
+                app:enterAnim="@anim/slide_in"
+                app:exitAnim="@anim/slide_out"
+                app:popEnterAnim="@anim/slide_in"
+                app:popExitAnim="@anim/slide_out"
+                android:id="@+id/action_terminalNumberFragment_to_terminalDataConfirmFragment"
+                app:destination="@id/terminalDataConfirmFragment" />
+    </fragment>
+    <fragment
+            android:id="@+id/terminalDataConfirmFragment"
+            android:name="com.mercari.android.MVVM.features.terminalconfirm.TerminalDataConfirmFragment"
+            android:label="TerminalDataConfirmFragment" />
 
 </navigation>
