@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tool="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:tools="http://schemas.android.com/tools">
+    <androidx.cardview.widget.CardView
+            android:layout_margin="@dimen/default_margin"
+            tool:cardElevation="@dimen/default_margin_half"
+            tool:cardCornerRadius="@dimen/default_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:padding="@dimen/default_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/homeItemImage"
+                    tool:layout_constraintTop_toTopOf="parent"
+                    tool:layout_constraintBottom_toBottomOf="parent"
+                    tool:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="@dimen/default_margin_triple"
+                    android:layout_height="@dimen/default_margin_triple"
+                    android:src="@mipmap/ic_launcher"/>
+
+            <com.mercari.android.MVVM.ui.components.PersianTextView
+                    android:id="@+id/homeItemCaption"
+                    style="@style/HomeItemsText"
+                    android:layout_marginStart="@dimen/default_margin_half"
+                    tool:layout_constraintTop_toTopOf="parent"
+                    tool:layout_constraintBottom_toBottomOf="parent"
+                    tool:layout_constraintEnd_toEndOf="parent"
+                    tool:layout_constraintStart_toEndOf="@id/homeItemImage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    tools:text="Item1"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</FrameLayout>

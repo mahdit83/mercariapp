@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#35835b</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimaryLight">#64bd8f</color>
+    <color name="colorAccent">#d9a858</color>
     <color name="backGroundColor">#F7F7F7</color>
     <color name="backGroundColorSecondary">#f8f9fc</color>
     <color name="primaryTextColor">#030303</color>
+    <color name="secondayTextColor">#555555</color>
+    <color name="divider">#b7b7b7</color>
+
+    <color name="homeItemColor">#bf944f</color>
 </resources>

@@ -7,8 +7,10 @@ import android.text.TextWatcher;
 import android.util.AttributeSet;
 
 import androidx.appcompat.widget.AppCompatTextView;
+import androidx.core.content.res.ResourcesCompat;
 
 import com.mercari.android.BuildConfig;
+import com.mercari.android.R;
 
 
 public class PersianTextView extends AppCompatTextView {
@@ -54,9 +56,7 @@ public class PersianTextView extends AppCompatTextView {
 
 
     public void setMyTypeface() {
-        Typeface normalTypeface = Typeface.createFromAsset(getContext().getAssets(), BuildConfig.FONT);
-
-        this.setTypeface(normalTypeface, Typeface.NORMAL);
+        setTypeface(ResourcesCompat.getFont(getContext(), R.font.iransansmobile));
     }
 
     private void initialize() {

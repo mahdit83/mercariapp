@@ -9,17 +9,19 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.mercari.android.MVVM.base.ViewModelFactory
+import com.mercari.android.MVVM.home.adapter.HomeAdapter
 import com.mercari.android.MVVM.products.ProductsViewModel
 import com.mercari.android.MVVM.ui.adapters.GridAdapter
+import com.mercari.android.MVVM.ui.dividers.NullDividerItemDecoration
 import com.mercari.android.MVVM.ui.listeners.OnAdapterItemClickListener
 import com.mercari.android.R
 import com.mercari.android.model.HomeItemModel
+import dagger.android.support.AndroidSupportInjection
 import kotlinx.android.synthetic.main.home_fragment.*
 import javax.inject.Inject
 
 class HomeFragment : Fragment() {
-
-    lateinit var homeViewModel: HomeViewModel
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -29,6 +31,11 @@ class HomeFragment : Fragment() {
     }
 
     private lateinit var viewModel: HomeViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        AndroidSupportInjection.inject(this)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -40,7 +47,6 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this,viewModelFactory).get(HomeViewModel::class.java)
-        // TODO: Use the ViewModel
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -60,9 +66,7 @@ class HomeFragment : Fragment() {
             fakeItems.add(item)
         }
 
-
-
-        val adapter = GridAdapter(fakeItems, object :
+        val adapter = HomeAdapter(fakeItems, object :
             OnAdapterItemClickListener<HomeItemModel> {
             override fun onAdapterItemClick(t: HomeItemModel) {
 
@@ -75,7 +79,7 @@ class HomeFragment : Fragment() {
 
         val layoutManager = LinearLayoutManager(activity)
         recyclerView.layoutManager = layoutManager
-        recyclerView.addItemDecoration(DividerItemDecoration(activity, layoutManager.orientation))
+        recyclerView.addItemDecoration(NullDividerItemDecoration())
         recyclerView.adapter = adapter
 
 

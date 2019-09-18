@@ -8,4 +8,11 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="HomeItemsText">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/homeItemColor</item>
+        <item name="android:fontFamily">@font/iransansmobile</item>
+    </style>
+
+
 </resources>

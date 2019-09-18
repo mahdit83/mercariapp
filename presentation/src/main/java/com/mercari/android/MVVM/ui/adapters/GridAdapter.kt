@@ -7,7 +7,7 @@ import com.mercari.android.MVVM.ui.viewHolders.BaseViewHolder
 import com.mercari.android.model.BaseModel
 import java.util.*
 
-class GridAdapter <T> constructor(
+abstract class GridAdapter <T> constructor(
     val data: MutableList<T>,
     val onAdapterItemClickListener: OnAdapterItemClickListener<T>
 ): RecyclerView.Adapter<BaseViewHolder<T>>() where T: BaseModel  {
@@ -16,9 +16,9 @@ class GridAdapter <T> constructor(
     lateinit var viewHolder: BaseViewHolder<T>
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<T> {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BaseViewHolder<T> {
+//        return viewHolder
+//    }
 
     override fun getItemCount(): Int = data.size
 
